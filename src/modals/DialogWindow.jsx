@@ -4,29 +4,29 @@ import Dialog from "@material-ui/core/Dialog";
 import withMobileDialog from "@material-ui/core/withMobileDialog";
 
 class DialogWindow extends Component {
-  handleClose() {
-    this.props.onClose();
-  }
+	handleClose() {
+		this.props.onClose();
+	}
 
-  render() {
-    const { open, fullScreen } = this.props;
-    return (
-      <Dialog
-        fullScreen={fullScreen}
-        open={open}
-        onClose={this.handleClose.bind(this)}
-        aria-labelledby="responsive-dialog-title"
-        fullWidth={true}
-        scroll="body"
-      >
-        {this.props.children}
-      </Dialog>
-    );
-  }
+	render() {
+		const { open, fullScreen } = this.props;
+		return (
+			<Dialog
+				fullScreen={fullScreen}
+				open={open}
+				onClose={this.handleClose.bind(this)}
+				aria-labelledby="responsive-dialog-title"
+				fullWidth={true}
+				scroll="body"
+			>
+				{this.props.children}
+			</Dialog>
+		);
+	}
 }
 
 DialogWindow.propTypes = {
-  onClose: PropTypes.func.isRequired,
+	onClose: PropTypes.func.isRequired,
 };
 
 export default withMobileDialog()(DialogWindow);

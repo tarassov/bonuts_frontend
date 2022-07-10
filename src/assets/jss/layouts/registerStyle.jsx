@@ -1,10 +1,3 @@
-import {
-  drawerWidth,
-  drawerCloseWidth,
-  transition,
-  container,
-} from "assets/jss/baseStyles.jsx";
-
-const registerStyle = (theme) => ({});
+const registerStyle = () => ({});
 
 export default registerStyle;

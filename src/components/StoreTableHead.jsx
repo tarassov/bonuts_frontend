@@ -20,78 +20,73 @@ import AddIcon from "@material-ui/icons/PlaylistAdd";
 import { useTranslation, Trans, withTranslation } from "react-i18next";
 
 const rows = [
-  { id: "name", numeric: false, disablePadding: true, label: "Donut name" },
-  { id: "price", numeric: true, disablePadding: false, label: "Price" },
-  {
-    id: "expiration_date",
-    numeric: false,
-    disablePadding: false,
-    label: "Expiration date",
-  },
+	{ id: "name", numeric: false, disablePadding: true, label: "Donut name" },
+	{ id: "price", numeric: true, disablePadding: false, label: "Price" },
+	{
+		id: "expiration_date",
+		numeric: false,
+		disablePadding: false,
+		label: "Expiration date",
+	},
 ];
 
 class StoreTableHead extends React.Component {
-  createSortHandler = (property) => (event) => {
-    this.props.onRequestSort(event, property);
-  };
+	createSortHandler = (property) => (event) => {
+		this.props.onRequestSort(event, property);
+	};
 
-  render() {
-    const {
-      onSelectAllClick,
-      order,
-      orderBy,
-      numSelected,
-      rowCount,
-    } = this.props;
+	render() {
+		const { onSelectAllClick, order, orderBy, numSelected, rowCount } =
+			this.props;
 
-    return (
-      <TableHead>
-        <TableRow>
-          <TableCell padding="checkbox">
-            <Checkbox
-              indeterminate={numSelected > 0 && numSelected < rowCount}
-              checked={numSelected === rowCount}
-              onChange={onSelectAllClick}
-            />
-          </TableCell>
-          {rows.map(
-            (row) => (
-              <TableCell
-                key={row.id}
-                align={row.numeric ? "right" : "left"}
-                padding={row.disablePadding ? "none" : "default"}
-                sortDirection={orderBy === row.id ? order : false}
-              >
-                <Tooltip
-                  title="Sort"
-                  placement={row.numeric ? "bottom-end" : "bottom-start"}
-                  enterDelay={300}
-                >
-                  <TableSortLabel
-                    active={orderBy === row.id}
-                    direction={order}
-                    onClick={this.createSortHandler(row.id)}
-                  >
-                    <Trans>{row.label}</Trans>
-                  </TableSortLabel>
-                </Tooltip>
-              </TableCell>
-            ),
-            this
-          )}
-        </TableRow>
-      </TableHead>
-    );
-  }
+		return (
+			<TableHead>
+				<TableRow>
+					<TableCell padding="checkbox">
+						<Checkbox
+							indeterminate={numSelected > 0 && numSelected < rowCount}
+							checked={numSelected === rowCount}
+							onChange={onSelectAllClick}
+						/>
+					</TableCell>
+					{rows.map(
+						(row) => (
+							<TableCell
+								key={row.id}
+								align={row.numeric ? "right" : "left"}
+								padding={row.disablePadding ? "none" : "default"}
+								sortDirection={orderBy === row.id ? order : false}
+							>
+								<Tooltip
+									title="Sort"
+									placement={row.numeric ? "bottom-end" : "bottom-start"}
+									enterDelay={300}
+								>
+									<TableSortLabel
+										active={orderBy === row.id}
+										direction={order}
+										onClick={this.createSortHandler(row.id)}
+									>
+										<Trans>{row.label}</Trans>
+									</TableSortLabel>
+								</Tooltip>
+							</TableCell>
+						),
+						this
+					)}
+				</TableRow>
+			</TableHead>
+		);
+	}
 }
 
 StoreTableHead.propTypes = {
-  numSelected: PropTypes.number.isRequired,
-  onRequestSort: PropTypes.func.isRequired,
-  onSelectAllClick: PropTypes.func.isRequired,
-  order: PropTypes.string.isRequired,
-  orderBy: PropTypes.string.isRequired,
-  rowCount: PropTypes.number.isRequired,
+	numSelected: PropTypes.number.isRequired,
+	onRequestSort: PropTypes.func.isRequired,
+	onSelectAllClick: PropTypes.func.isRequired,
+	order: PropTypes.string.isRequired,
+	orderBy: PropTypes.string.isRequired,
+	rowCount: PropTypes.number.isRequired,
 };
 
 export default withTranslation()(StoreTableHead);

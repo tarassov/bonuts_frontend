@@ -1,6 +1,4 @@
-import {
-
-} from "assets/jss/baseStyles.jsx";
+import {} from "../baseStyles.jsx";
 
 const eventsFilterStyle = () => ({});
 export default eventsFilterStyle;

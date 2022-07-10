@@ -4,25 +4,25 @@ import ConfirmModalView from "./ConfirmModalView";
 import * as modalActions from "actions/modalActions";
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    enqueueSnackbar: (notification) => {
-      dispatch(enqueueSnackbar(notification));
-    },
+	return {
+		enqueueSnackbar: (notification) => {
+			dispatch(enqueueSnackbar(notification));
+		},
 
-    onAccept: (item) => {
-      dispatch(modalActions.okDialog());
-    },
+		onAccept: (item) => {
+			dispatch(modalActions.okDialog());
+		},
 
-    onCancel: (item) => {
-      dispatch(modalActions.cancelDialog());
-    },
-  };
+		onCancel: (item) => {
+			dispatch(modalActions.cancelDialog());
+		},
+	};
 };
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    modal: state.modal,
-  };
+	return {
+		modal: state.modal,
+	};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ConfirmModalView);

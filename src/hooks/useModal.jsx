@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux'
-import * as actionTypes from "actions/modal/actionTypes";
+import { useDispatch } from "react-redux";
 
-export function useModal(modalName){
-    const dispatch = useDispatch()
-    
-    const showModal = (body)=>{
-        dispatch({
-            type: actionTypes.SHOW_MODAL,
-            modalName: modalName,
-            body: body,
-          })
-    }
+import * as actionTypes from "../actions/modal/actionTypes";
 
-    return {showModal}
+export function useModal(modalName) {
+	const dispatch = useDispatch();
 
+	const showModal = (body) => {
+		dispatch({
+			type: actionTypes.SHOW_MODAL,
+			modalName: modalName,
+			body: body,
+		});
+	};
+
+	return { showModal };
 }

@@ -10,27 +10,27 @@ import modalStyle from "assets/jss/modals/modalStyle";
 import { withTranslation, Trans } from "react-i18next";
 
 class DynamicModal extends Component {
-  render() {
-    const { body, classes, title } = this.props;
+	render() {
+		const { body, classes, title } = this.props;
 
-    return (
-      <React.Fragment>
-        <div ref={(el) => (this.componentRef = el)}>
-          <DialogTitle id="modal_dialog">
-            <Trans>{title}</Trans>
-          </DialogTitle>
-          <DialogContent>
-            <DynamicForm {...this.props} />
-          </DialogContent>
-        </div>
-      </React.Fragment>
-    );
-  }
+		return (
+			<React.Fragment>
+				<div ref={(el) => (this.componentRef = el)}>
+					<DialogTitle id="modal_dialog">
+						<Trans>{title}</Trans>
+					</DialogTitle>
+					<DialogContent>
+						<DynamicForm {...this.props} />
+					</DialogContent>
+				</div>
+			</React.Fragment>
+		);
+	}
 }
 
 DynamicModal.propTypes = {
-  classes: PropTypes.object.isRequired,
-  title: PropTypes.string,
+	classes: PropTypes.object.isRequired,
+	title: PropTypes.string,
 };
 
 export default withStyles(modalStyle)(withMobileDialog()(DynamicModal));

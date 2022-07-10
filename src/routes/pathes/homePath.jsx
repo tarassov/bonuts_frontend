@@ -1,15 +1,15 @@
 import React from "react";
 import LocationOn from "@material-ui/icons/LocationOn";
-import HomePage from "containers/pages/HomePage";
-import AppPath from "routes/appPath";
+import HomePage from "../../containers/pages/HomePage";
+import AppPath from "../appPath";
 
 export const homePath = new AppPath({
-  path: "/home",
-  anonymous: true,
-  authenticated: false,
-  sidebarName: "Home",
-  navbarName: "Home",
-  icon: LocationOn,
-  hideInMenu: true,
-  component: <HomePage/>,
+	path: "/home",
+	anonymous: true,
+	authenticated: false,
+	sidebarName: "Home",
+	navbarName: "Home",
+	icon: LocationOn,
+	hideInMenu: true,
+	component: <HomePage />,
 });

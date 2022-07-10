@@ -66,85 +66,85 @@ export const SAVE_ACCOUNT_SUCCESS = "SAVE_ACCOUNT_SUCCESS";
 export const SAVE_ACCOUNT_FAILED = "SAVE_ACCOUNT_FAILED";
 
 export function loading(name) {
-  return "LOADING_" + name.toUpperCase();
+	return "LOADING_" + name.toUpperCase();
 }
 export function loadSuccess(name) {
-  return "LOAD_" + name.toUpperCase() + "_SUCCESS";
+	return "LOAD_" + name.toUpperCase() + "_SUCCESS";
 }
 
 export function addSuccess(name) {
-  return "ADD_" + name.toUpperCase() + "_SUCCESS";
+	return "ADD_" + name.toUpperCase() + "_SUCCESS";
 }
 
 export function getSuccess(name) {
-  return "GET_" + name.toUpperCase() + "_SUCCESS";
+	return "GET_" + name.toUpperCase() + "_SUCCESS";
 }
 
 export function loadItemSuccess(name) {
-  return "LOAD_" + name.toUpperCase() + "ITEM_SUCCESS";
+	return "LOAD_" + name.toUpperCase() + "ITEM_SUCCESS";
 }
 
 export function loadItemFailed(name) {
-  return "LOAD_" + name.toUpperCase() + "ITEM_FAILED";
+	return "LOAD_" + name.toUpperCase() + "ITEM_FAILED";
 }
 
 export function loadFailed(name) {
-  return "LOAD_" + name.toUpperCase() + "_FAILED";
+	return "LOAD_" + name.toUpperCase() + "_FAILED";
 }
 
 export function saveSuccess(name) {
-  return "SAVE_" + name.toUpperCase() + "_SUCCESS";
+	return "SAVE_" + name.toUpperCase() + "_SUCCESS";
 }
 
 export function saveFailed(name) {
-  return "SAVE_" + name.toUpperCase() + "_FAILED";
+	return "SAVE_" + name.toUpperCase() + "_FAILED";
 }
 
 export function saveItemSuccess(name) {
-  return "SAVE_" + name.toUpperCase() + "ITEM_SUCCESS";
+	return "SAVE_" + name.toUpperCase() + "ITEM_SUCCESS";
 }
 
 export function saveItemFailed(name) {
-  return "SAVE_" + name.toUpperCase() + "ITEM_FAILED";
+	return "SAVE_" + name.toUpperCase() + "ITEM_FAILED";
 }
 export function updateItemSuccess(name) {
-  return "UPDATE_" + name.toUpperCase() + "ITEM_SUCCESS";
+	return "UPDATE_" + name.toUpperCase() + "ITEM_SUCCESS";
 }
 
 export function updateSuccess(name) {
-  return "UPDATE_" + name.toUpperCase() + "_SUCCESS";
+	return "UPDATE_" + name.toUpperCase() + "_SUCCESS";
 }
 export function updateItemFailed(name) {
-  return "UPDATE_" + name.toUpperCase() + "ITEM_FAILED";
+	return "UPDATE_" + name.toUpperCase() + "ITEM_FAILED";
 }
 export function removeItemSuccess(name) {
-  return "REMOVE_" + name.toUpperCase() + "ITEM_SUCCESS";
+	return "REMOVE_" + name.toUpperCase() + "ITEM_SUCCESS";
 }
 
 export function deleteSuccess(name) {
-  return "DELETE" + name.toUpperCase() + "_SUCCESS";
+	return "DELETE" + name.toUpperCase() + "_SUCCESS";
 }
 
 export function removeItemFailed(name) {
-  return "REMOVE_" + name.toUpperCase() + "ITEM_FAILED";
+	return "REMOVE_" + name.toUpperCase() + "ITEM_FAILED";
 }
 
 export function getActionName(action, name, result) {
-  let actionName = "";
+	let actionName = "";
 
-  if (action !== undefined) {
-    actionName = action.toUpperCase();
-  }
+	if (action !== undefined) {
+		actionName = action.toUpperCase();
+	}
 
-  if (name !== undefined) {
-    actionName = actionName + "_" + name.toUpperCase();
-  }
+	if (name !== undefined) {
+		actionName = actionName + "_" + name.toUpperCase();
+	}
 
-  if (actionName !== "") {
-    actionName = actionName + "_" + result.toUpperCase();
-  } else {
-    actionName = "ACTION_" + result.toUpperCase();
-  }
+	if (actionName !== "") {
+		actionName = actionName + "_" + result.toUpperCase();
+	} else {
+		actionName = "ACTION_" + result.toUpperCase();
+	}
 
-  return actionName;
+	return actionName;
 }

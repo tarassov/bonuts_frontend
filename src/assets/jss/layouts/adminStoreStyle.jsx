@@ -1,9 +1,4 @@
-import { 
+import {} from "assets/jss/baseStyles.jsx";
 
- } from "assets/jss/baseStyles.jsx";
-
-
-const adminStoreFile = {
- 
-};
+const adminStoreFile = {};
 export default adminStoreFile;

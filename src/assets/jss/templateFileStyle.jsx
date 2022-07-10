@@ -1,9 +1,4 @@
-import { 
+import {} from "assets/jss/baseStyles.jsx";
 
- } from "assets/jss/baseStyles.jsx";
-
-
-const templateFileStyle = {
- 
-};
+const templateFileStyle = {};
 export default templateFileStyle;

@@ -1,23 +1,22 @@
 import { connect } from "react-redux";
 
-import { authenticate } from "actions/authActions";
-import Sideboard from "components/Sideboard";
+import Sideboard from "../components/Sideboard";
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+	return {};
 };
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    authenticate: state.authenticate,
-    routes: ownProps.routes,
-    profile: state.profile,
-  };
+	return {
+		authenticate: state.authenticate,
+		routes: ownProps.routes,
+		profile: state.profile,
+	};
 };
 
 const SideboardContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(Sideboard);
 
 export default SideboardContainer;
