@@ -17,7 +17,6 @@ import AnonymousRoutes from "../routes/components/AnonymousRoutes";
 import { createTheme } from "@material-ui/core/styles";
 import { useLocation } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { useClearCache } from "react-clear-cache";
 import Sideboard from "./Sideboard";
 import { useTranslation } from "react-i18next";
 import RegularButton from "./base/customButtons/RegularButton";
@@ -106,8 +105,6 @@ export default function App(props) {
 		[classes.mainPanelWide]: !drawerOpen || !authenticate.authenticated,
 	});
 
-	const { isLatestVersion, emptyCacheStorage } = useClearCache();
-
 	return (
 		<MuiThemeProvider theme={theme}>
 			<Notifier />
@@ -128,23 +125,6 @@ export default function App(props) {
 							<HeaderContainer routes={routes} {...rest} />
 							<div className={classes.content}>
 								<div className={classes.container}>
-									<div>
-										{!isLatestVersion && (
-											<p>
-												<a
-													href="#"
-													onClick={(e) => {
-														e.preventDefault();
-														emptyCacheStorage();
-													}}
-												>
-													<RegularButton round color={"info"}>
-														{t("Update is available")}
-													</RegularButton>
-												</a>
-											</p>
-										)}
-									</div>
 									<AuthenticatedRoutes
 										routes={routes}
 										currentTenant={currentTenant}

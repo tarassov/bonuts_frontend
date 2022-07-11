@@ -1,6 +1,7 @@
 {
 	"name": "bonuts",
 	"version": "0.6.0",
+	"homepage": "./",
 	"dependencies": {
 		"@material-ui/core": "^4.12.3",
 		"@material-ui/icons": "^4.11.2",
@@ -25,7 +26,6 @@
 		"query-string": "^6.14.1",
 		"react": "^17.0.2",
 		"react-chartjs-2": "^2.11.2",
-		"react-clear-cache": "^1.4.12",
 		"react-datetime": "^3.1.1",
 		"react-dom": "^17.0.2",
 		"react-dropzone": "^11.4.2",
@@ -51,14 +51,10 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"dev-build": "NODE_PATH=./src npm run build",
-		"lint:check": "eslint . --ext=js,jsx;  exit 0",
-		"lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
 		"install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
 		"compile-sass": "node-sass src/assets/scss/material-dashboard-pro-react.scss src/assets/css/material-dashboard-pro-react.css",
 		"minify-sass": "node-sass src/assets/scss/material-dashboard-pro-react.scss src/assets/css/material-dashboard-pro-react.min.css --output-style compressed",
 		"map-sass": "node-sass src/assets/scss/material-dashboard-pro-react.scss src/assets/css/material-dashboard-pro-react.css --source-map true",
-		"prebuild": "npm run generate-build-meta",
-		"generate-build-meta": "./node_modules/react-clear-cache/bin/cli.js",
 		"eslint": "eslint ./src",
 		"eslint:fix": "eslint ./src --fix",
 		"prettier": "prettier --check src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc",
@@ -66,13 +62,16 @@
 		"stylelint": "stylelint src/**/*.css",
 		"stylelint:fix": "stylelint src/**/*.css --fix",
 		"format:check": "eslint ./src && prettier --check src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc && stylelint src/**/*.css",
-		"format:fix": "eslint ./src --fix && prettier --write src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc && stylelint src/**/*.css --fix"
+		"format:fix": "eslint ./src --fix && prettier --write src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc && stylelint src/**/*.css --fix",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.0.0",
+		"gh-pages": "^4.0.0",
 		"prettier": "^2.6.2"
 	},
 	"browserslist": {
