@@ -20,44 +20,41 @@ const WrappedLinks = React.forwardRef((props, ref) => (
 ));
 WrappedLinks.displayName = "WrappedLinks";
 class AccountMenu extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			auth: true,
-			anchorEl: null,
-		};
-	}
+	state = {
+		auth: true,
+		anchorEl: null,
+	};
 
-	handleChange(event, checked) {
+	handleChange = (event, checked) => {
 		this.setState({ auth: checked });
-	}
+	};
 
-	handleMenu(event) {
+	handleMenu = (event) => {
 		this.setState({ anchorEl: event.currentTarget });
-	}
+	};
 
-	handleClose() {
+	handleClose = () => {
 		this.setState({ anchorEl: null });
-	}
+	};
 
-	handleLogOut() {
+	handleLogOut = () => {
 		this.setState({ anchorEl: null });
 		this.props.onLogOut();
-	}
+	};
 
-	handleLogIn() {
+	handleLogIn = () => {
 		this.setState({ anchorEl: null });
 		this.props.onLoginRedirect();
-	}
-	handleRegister() {
+	};
+	handleRegister = () => {
 		this.setState({ anchorEl: null });
 		this.props.onRegisterRedirect();
-	}
+	};
 
-	handleAccount() {
+	handleAccount = () => {
 		this.setState({ anchorEl: null });
 		this.props.onAccount();
-	}
+	};
 
 	render() {
 		const { profile, routes } = this.props;
