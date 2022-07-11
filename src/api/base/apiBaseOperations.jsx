@@ -1,8 +1,8 @@
 import Storage from "../../common/storage";
 import { parse } from "./jsonParser";
 
-const API_URL = "http://localhost:3000/";
-//const API_URL = "https://api.bonuts.ru/";
+//const API_URL = "http://localhost:3000/";
+const API_URL = "https://api.bonuts.ru/";
 
 function handleErrors(response) {
 	if (!response.ok) {
