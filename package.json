@@ -64,7 +64,7 @@
 		"format:check": "eslint ./src && prettier --check src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc && stylelint src/**/*.css",
 		"format:fix": "eslint ./src --fix && prettier --write src/**/*.{js,jsx,ts,tsx} --config ./.prettierrc && stylelint src/**/*.css --fix",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -b master -d build"
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
