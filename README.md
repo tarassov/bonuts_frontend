@@ -6,7 +6,7 @@ Fast and simple way to encourage your colleagues and thank them for their patien
 
 &nbsp;
 
-## DEMO: You can find the demo [HERE](https://tarassov.github.io/dashboard)
+## DEMO: You can find the demo [HERE](https://demo.bonuts.ru)
 
 &nbsp;
 
