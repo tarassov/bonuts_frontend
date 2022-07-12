@@ -1,5 +1,5 @@
 {
-	"name": "bonuts",
+	"name": "bonuts_frontend",
 	"version": "0.6.0",
 	"homepage": "https://tarassov.github.io/bonuts_frontend/",
 	"dependencies": {
