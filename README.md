@@ -1,6 +1,7 @@
 # What is this all about
 
 Frontend part for the [Bonuts project](https://github.com/tarassov/bonuts)
+
 Fast and simple way to encourage your colleagues and thank them for their patience and help.
 
 &nbsp;
