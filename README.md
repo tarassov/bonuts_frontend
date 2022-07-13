@@ -33,5 +33,5 @@ Fast and simple way to encourage your colleagues and thank them for their patien
 
 ### `npm start`
 
-If you want to change the api entry point you hvae to change the `API_URL` in the `./src/api/base/apiBaseOperations.jsx`
-By the default it set to https://api.bonuts.ru/
+If you want to change the api entry point you have to change the `API_URL` in the `./src/api/base/apiBaseOperations.jsx`
+By the default it is set to https://api.bonuts.ru/
