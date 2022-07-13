@@ -2,6 +2,8 @@
 
 Frontend part for the [Bonuts project](https://github.com/tarassov/bonuts)
 
+This repository was extracted from the [main repository](https://github.com/tarassov/bonuts) previously containing both backend and frontend part. 
+
 Fast and simple way to encourage your colleagues and thank them for their patience and help.
 
 &nbsp;
