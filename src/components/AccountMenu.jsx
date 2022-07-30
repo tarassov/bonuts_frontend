@@ -73,7 +73,7 @@ class AccountMenu extends React.Component {
 					onClick={this.handleMenu}
 					color="inherit"
 				>
-					{avatar_url !== undefined && avatar_url !== null && (
+					{avatar_url && (
 						<UserAvatar size="30" name={profile.name} src={avatar_url} />
 					)}
 					{!avatar_url && <AccountCircle />}
